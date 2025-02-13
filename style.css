@@ -1,3 +1,6 @@
+/* Importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Press+Start+2P&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
@@ -21,6 +24,7 @@ body {
     transition: transform 0.6s ease-in-out;
     position: relative; /* Helps maintain centering */
     box-sizing: border-box;
+    z-index: 10; /* Ensure form is above other elements */
 }
 
 #login-form:hover {
@@ -65,10 +69,25 @@ body {
 }
 
 #result {
-    color: #ff3b5c;
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin to avoid overlap */
     font-size: 18px;
     font-weight: bold;
+    position: relative; /* Ensure proper stacking */
+    z-index: 5;  /* Lower z-index for the result message */
+}
+
+/* Style for correct secret code (romantic font) */
+.correct-code {
+    font-family: 'Dancing Script', cursive;
+    color: #ff6b81;
+}
+
+/* Style for wrong secret code (nasty font) */
+.wrong-code {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff3b5c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Ensuring the form stays centered in landscape mode */
