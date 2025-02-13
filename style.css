@@ -1,0 +1,80 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures proper centering */
+    padding: 20px;
+    margin: 0;
+}
+
+#login-form {
+    width: 50%;
+    max-width: 450px; /* Prevents it from being too wide */
+    padding: 25px;
+    border: 5px solid #ff6b81;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(255, 105, 135, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.6s ease-in-out;
+    position: relative; /* Helps maintain centering */
+    box-sizing: border-box;
+}
+
+#login-form:hover {
+    transform: scale(1.15);
+}
+
+#code {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ff6b81;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 8px rgba(255, 105, 135, 0.2);
+}
+
+#code:focus {
+    border-color: #ff3b5c;
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.5);
+}
+
+#submit-btn {
+    background: linear-gradient(to right, #ff6b81, #ff3b5c);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(255, 105, 135, 0.3);
+}
+
+#submit-btn:hover {
+    background: linear-gradient(to right, #ff3b5c, #ff6b81);
+    box-shadow: 0 5px 15px rgba(255, 105, 135, 0.5);
+    transform: translateY(-3px);
+}
+
+#result {
+    color: #ff3b5c;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Ensuring the form stays centered in landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start; /* Prevents cut-off */
+        padding-top: 20px;
+    }
+}
