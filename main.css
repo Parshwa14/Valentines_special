@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffe5e5, #ffb3d9); /* Soft gradient background */
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+}
+
+.container .tenor-gif-embed {
+    max-width: 250px; /* Slightly larger GIF */
+}
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    background: #ff66b2; /* Soft pink background */
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn a:hover {
+    background-color: #ff3385; /* Darker pink on hover */
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0.7rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.btn a:active {
+    transform: scale(0.98);
+    box-shadow: 0.3rem 0.6rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#newButton {
+    display: none; /* Initially hidden */
+    top: 100px;
+    left: 100px;
+}
+
+/* Heart Animation */
+.heart {
+    position: absolute;
+    font-size: 50px;
+    color: red;
+    animation: heart-animation 1s ease-out;
+    opacity: 0;
+    transform: scale(0);
+}
+
+@keyframes heart-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
