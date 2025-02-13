@@ -14,6 +14,7 @@ form.addEventListener('submit', (e) => {
         resultDiv.innerHTML = '&#x1F497; Mera Ladduuuu &#x1F497;'; // Unicode heart emoji
         resultDiv.style.color = '#ff3b5c';
         resultDiv.style.fontSize = '22px';
+        resultDiv.className = 'correct-code'; // Apply the romantic font class
 
         // Floating heart effect
         const hearts = document.createElement('div');
@@ -33,6 +34,7 @@ form.addEventListener('submit', (e) => {
     } else {
         resultDiv.innerHTML = '&#x1F621; Battameej... Apna naam enter kare!';
         resultDiv.style.color = 'red';
+        resultDiv.className = 'wrong-code'; // Apply the angry font class
 
         // Shake effect
         form.classList.add('shake');
